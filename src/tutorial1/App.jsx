@@ -6,12 +6,12 @@ const options = {
   day: 'numeric',
 };
 
-const Profile = (props) => {
-  const date = props.registredAt.toLocaleDateString('ru-RU', options);
+const Profile = ({ name, registredAt }) => {
+  const date = registredAt.toLocaleDateString('ru-RU', options);
 
   return (
     <div>
-      <p>'Привет {props.name}</p>
+      <p>'Привет {name}</p>
       <p>Дата регистрации: {date}</p>
     </div>
   );
@@ -20,12 +20,14 @@ const Profile = (props) => {
 class Profile2 extends React.Component {
   constructor(props) {
     super(props);
-    this.date = props.registredAt.toLocaleDateString('ru-RU', options);
+    const { name, registredAt } = this.props;
+    this.date = registredAt.toLocaleDateString('ru-RU', options);
+    this.name = name;
   }
   render() {
     return (
       <div>
-        <p>'Привет {this.props.name}</p>
+        <p>'Привет {this.name}</p>
         <p>
           Дата регистрации:
           {this.date}
