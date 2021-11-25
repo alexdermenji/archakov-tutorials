@@ -15,11 +15,13 @@ const App = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!email.length || !password.length) {
+    if (!email.trim().length || !password.trim().length) {
       alert('Please enter all details in form inputs');
       return;
     }
     console.log({ email, password });
+    email = '';
+    password = '';
     e.target.reset();
   };
 
