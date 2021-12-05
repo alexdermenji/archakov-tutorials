@@ -2,8 +2,7 @@ import { Nav, Navbar, Row, Col, Card } from 'react-bootstrap';
 
 export default function App() {
   const { pathname } = window.location;
-  const post = window.location.pathname.split('/');
-  const postNumber = post[post.length - 1];
+  const postNumber = pathname.split('/').pop();
   console.log(postNumber);
 
   return (
