@@ -11,6 +11,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.24.0",
     "babel": "^5.8.23",
     "babel-core": "^5.0.0",
     "babel-loader": "8.1.0",
@@ -21,6 +22,7 @@
     "react-hook-form": "^7.22.5",
     "react-router-dom": "^6.2.1",
     "react-scripts": "4.0.3",
+    "styled-components": "^5.3.3",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
